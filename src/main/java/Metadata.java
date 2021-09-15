@@ -28,12 +28,8 @@ public class Metadata {
         return checksum;
     }
 
-    public boolean fileIsEmpty(){
-        return size.equals("0");
-    }
-
-    public boolean isExecutable(){
-        return filename.substring(filename.lastIndexOf(".")).contains(".exe");
+    public String getExtension(){
+        return filename.substring(filename.lastIndexOf("."));
     }
 
     @Override

@@ -12,7 +12,7 @@ public class Runner {
         //FILE WHICH ARE EMPTY (SIZE = 0)
         System.out.println("---FILES WHICH ARE EMPTY (SIZE = 0)---");
         for (Metadata record : records) {
-            if (record.fileIsEmpty()) {
+            if (record.getSize().equals("0")) {
                 System.out.println(record.getFilename());
             }
         }
@@ -20,7 +20,7 @@ public class Runner {
         //FILE WHICH ARE EXECUTABLE (.EXE)
         System.out.println("---FILE WHICH ARE EXECUTABLE (.EXE)---");
         records.stream()
-                .filter(Metadata::isExecutable)
+                .filter(metadata -> metadata.getExtension().contains(".exe"))
                 .forEach(data -> System.out.println(data.getFilename()));
 
 
