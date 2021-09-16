@@ -1,4 +1,7 @@
+import model.Metadata;
 import org.junit.jupiter.api.Test;
+import parsers.CsvParser;
+import parsers.Parser;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

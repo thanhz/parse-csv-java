@@ -1,3 +1,5 @@
+package model;
+
 public class Metadata {
 
     private final String filename;
@@ -34,7 +36,7 @@ public class Metadata {
 
     @Override
     public String toString() {
-        return "Metadata{" +
+        return "model.Metadata{" +
                 "filename='" + filename + '\'' +
                 ", description='" + description + '\'' +
                 ", size='" + size + '\'' +
